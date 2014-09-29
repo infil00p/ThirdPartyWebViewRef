@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+           id="org.apache.cordova.engine.crosswalk"
+      version="0.0.1-dev">
+
+    <name>Crosswalk Engine</name>
+    <description>Intel CrossWalk Engine</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,chromium,crosswalk,webview</keywords>
+    <repo>https://github.com/infil00p/cordova-webview-api-ref.git</repo>
+    <issue></issue>
+
+    <engines>
+      <engine name="cordova-android" version=">=4.0.0-dev" />
+    </engines>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <preference name="webView" value="org.apache.cordova.engine.apiref" />
+        </config-file>
+
+        <source-file src="src/android/ReferenceWebView.java" target-dir="src/org/apache/cordova/engine/apiref" />
+        <source-file src="src/android/IceCreamCordovaWebView.java" target-dir="src/org/apache/cordova/engine/apiref" />
+        <source-file src="src/android/ImpSpecificChromeClient.java" target-dir="src/org/apache/cordova/engine/apiref" />
+        <source-file src="src/android/ReferenceExposedJsApi.java" target-dir="src/org/apache/cordova/engine/apiref" />
+        <source-file src="src/android/ImpSpecificWebViewClient.java" target-dir="src/org/apache/cordova/engine/apiref" />
+
+
+    </platform>
+</plugin>
